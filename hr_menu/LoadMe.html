@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>HM Version 5 Examples</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+if(window.event + "" == "undefined") event = null;
+function HM_f_PopUp(){return false};
+function HM_f_PopDown(){return false};
+popUp = HM_f_PopUp;
+popDown = HM_f_PopDown;
+//-->
+</SCRIPT>
+
+
+
+</HEAD>
+<BODY>
+<BLOCKQUOTE>
+<H3>Sample HTML page with 5 Hierarchical Menus</H3>
+<P><A HREF="aLinkForOldBrowsersGoesHere.html"
+      onMouseOver="HM_f_PopUp('elMenu3',event)"
+      onMouseOut="HM_f_PopDown('elMenu3')">
+          Tall-Child Relative-to-Mouse-Position Using Keywords Popup Menu (Displays on <I>mouseover</I>)</A></P>
+</BLOCKQUOTE>
+
+<SCRIPT LANGUAGE="JavaScript1.2"
+        SRC="HM_Loader.js"
+        TYPE='text/javascript'></SCRIPT>
+</BODY>
+</HTML>

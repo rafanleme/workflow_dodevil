@@ -1,0 +1,299 @@
+/* --------------------------------
+   CONFIGURAÇÕES GLOBAIS
+----------------------------------- */
+
+* {
+	/*font-family: 'Trebuchet MS', Open Sans, Arial, Helvetica, sans-serif;*/
+	font-family: "Open Sans", Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	color: #777777;
+}
+
+/* Links */
+a{
+	color: #00648e;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s; /* Firefox 4 */
+	-webkit-transition-duration: 4s; /* Safari and Chrome */
+	-o-transition-duration: 0.4s; /* Opera */ 
+}
+
+
+/* --------------------------------
+   CONTEUDO
+----------------------------------- */
+#tudo {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center; /*hack para o IE*/ 
+}
+
+#conteudo{
+	padding: 10px 0px 0px 0px; /*topo direita baixo esquerda*/
+	margin: 10px 0px 10px 0px; /*topo direita baixo esquerda*/
+	text-align: left;
+	overflow: visible;
+}
+
+.body-bg{
+	background: url('../images/id-logo-watermark.png') no-repeat fixed right;
+	background-position: 95% 95%;
+}
+
+.footer{
+	width: 100%;
+	height: 165px;
+	background: url('../images/id-logo-watermark.png') no-repeat;
+	background-position: 95% 100%;
+	margin-bottom: 15px;
+	padding-bottom: 0px;
+}
+
+h1 {	
+	color: #000;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+h2 {
+	color: #000;
+	font-size: 27.5px;
+	font-weight: 500;
+	line-height: 40px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+.tt{
+	border-bottom: 1px solid #E8E8E8;
+}
+
+h3 {
+	color: #383F45;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
+h4 {
+	color: #555;
+	font-size: 13px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+div#qTip{
+	position: absolute;
+	z-index: 1000;
+	display: none;
+	padding: 8px;
+
+	font-size: 12px;
+	text-align: left;
+
+	background-color: #ffffd6;
+	border: 1px solid #f0e4c3;
+	border-radius: 3px;
+}
+
+
+
+/* --------------------------------
+   TABELAS
+----------------------------------- */
+.tab-tool{
+	width: 100%;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: separate;
+	border-spacing: 8px; 
+}
+
+.tab-tool td{
+	width: 270px;
+	height: 130px;
+	padding: 10px;
+	text-align: center;
+	background: url('../images/bg/azul.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.tab-tool td span.name {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.tab-tool td span.status {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.tab-tool td:hover {
+	cursor: pointer;
+}
+
+.tab-link-site{
+	width: 450px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+.tab-link-site tr{
+	border: 1px solid #E6E6E6;
+}
+
+.tab-link-site tr:hover{
+	background-color: #EEEEEE;
+}
+
+.tab-link-site td{
+	padding: 2px;
+	font-size: 20px;
+}
+
+.tab-link-site td:first-child{
+	width: 15px;
+}
+
+.tab-link-site td img{
+	height: 56px
+}
+
+.tab-link-site td a{
+	padding-left: 12px;
+}
+
+/* --------------------------------
+   HEADER
+----------------------------------- */
+.header-wrapper{
+	width: 100%;
+	height: 78px;
+	margin: 0 auto;
+	text-align: center; /*hack para o IE*/ 
+	background: url('../images/topo_bg.jpg') no-repeat center center;
+}
+
+.header-content{
+	width: 1000px;
+	height: 78px;
+	margin: 0 auto;
+	overflow: visible;
+}
+
+
+.header-login{
+	float: right;
+	margin: 5px 5px 0px 0px; /*topo direita baixo esquerda*/
+	text-align: right;
+}
+
+#login, #senha {
+	margin: 0px 0px 2px 0px; /*topo direita baixo esquerda*/
+	padding: 3px 23px 3px 3px; /*topo direita baixo esquerda*/
+	color: #606060; 
+	font-size: 11px;
+	width: 150px;
+	display: list-item;
+	list-style-type: none;
+	/*border: 1px solid #BDC4C9;*/
+
+	border: 1px solid #BFBFBF;
+	border-radius: 3px;
+	box-shadow: #000000 0px 0px 0px 0px, #EEEEEE 0px 3px 3px 0px inset;
+	background-size: 20px 20px;
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+
+.header-login span{
+	display: list-item;
+	list-style-type: none;
+}
+
+#login{
+	background-image: url('../images/login/person.png');
+}
+
+#senha{
+	background-image: url('../images/login/key.png');
+}
+
+#bt-entrar{
+	padding: 2px 6px 2px 6px; /*topo direita baixo esquerda*/
+	background-color: #498AF3;
+	border: 1px solid #3079ED;
+	border-radius: 2px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.header-login label {
+	font-size: 12px; 
+	color: #FFFFFF; 
+}
+
+.msg-error{
+	padding-left: 20px;
+	line-height: 22px;
+	color: #CE1A1A;
+	font-weight: bold;
+	background: url('../images/login/stop_round.png') no-repeat left center;
+}
+
+
+.title-bar-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center; /*hack para o IE*/ 
+
+	border-bottom: 1px solid #EEEEEE;
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 1px 0px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.25);
+}
+
+
+.title-bar-content {
+	width: 1000px;
+	margin: 0 auto;
+
+	text-align: right;
+	font-size: 12px;
+	line-height: 20px;
+
+	overflow: visible;
+}
+
+
+.header-content-login {
+	padding: 5px;
+    /*border: 1px solid #000000;*/
+    text-align: right;	
+}
+
+.header-content-login span {
+	color: #353535;
+}
+
+
