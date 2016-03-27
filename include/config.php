@@ -15,11 +15,12 @@
 // CONFIGURACAO DO MYSQL
 ////////////////////////////////////////////////////////////
 
-   if(($_SERVER["SERVER_NAME"]=="thebeast") OR ($_SERVER["SERVER_NAME"]=="190.67.10.100")  OR ($GLOBALS["AMBIENTE"]=="localhost") OR ($_SERVER["SERVER_NAME"]=="localhost")){
-   	$host = "localhost";
-   	$pass = "@sispcp";
+   if(($_SERVER["SERVER_NAME"]=="thebeast") OR ($_SERVER["SERVER_NAME"]=="190.67.10.100")  OR ($GLOBALS["AMBIENTE"]=="localhost") OR ($_SERVER["SERVER_NAME"]=="localhost..")){
+   	echo $_SERVER["SERVER_NAME"];
+	$host = "localhost";
+   	$pass = "";
    	$database = "workflow_dodevil";
-   	$user = "sispcp";
+   	$user = "root";
    	$ambiente = "<div style='width:100%;height:25px;background-color:red;text-align:center;align:center;vertical-align:middle;'><font face=verdana size=2 color=white><b><marquee>* * * * * * DATABASE EM AMBIENTE DE TESTE * * * * * *</marquee></b></font></div>";
    }elseif(($_SERVER["SERVER_NAME"]=="ti-developer") OR ($_SERVER["SERVER_NAME"]=="190.67.10.71")  OR ($GLOBALS["AMBIENTE"]=="teste")){
    	$host = "localhost";
