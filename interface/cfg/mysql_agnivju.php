@@ -16,7 +16,7 @@ return mysql_connect($server,$lgbd,$passbd);
 function dbsel () 
 {
 
-$bd = "etrporju"; // Nome da base de dados
+$bd = "workflow_dodevil"; // Nome da base de dados
 
 return mysql_select_db($bd);
 

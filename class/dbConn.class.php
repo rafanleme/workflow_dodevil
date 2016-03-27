@@ -15,7 +15,7 @@ class dbConn {
 
 	private $myConn = NULL;
 	private $sql_host = "localhost";
-	private $sql_database = "etrporju";
+	private $sql_database = "workflow_dodevil";
 	private $sql_user = "root";
 	private $sql_pass = "";
 	private $sql_type = "mysql";

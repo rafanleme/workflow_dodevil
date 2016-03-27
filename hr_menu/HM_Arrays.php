@@ -54,7 +54,7 @@ HM_Array34 = [
     $cont3 = 0;
     while($valor3=mysql_fetch_array($resu3)){
     	  if($cont3>0){ echo ",\n";}
-    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/etrporju/sys_base/".$valor3["sf_path"]."\",1,0,0]";
+    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/workflow_dodevil/sys_base/".$valor3["sf_path"]."\",1,0,0]";
 	  $cont3++;
     }
     if($cont3>0){
@@ -99,7 +99,7 @@ HM_Array36 = [
     $cont3 = 0;
     while($valor3=mysql_fetch_array($resu3)){
     	  if($cont3>0){ echo ",\n";}
-    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/etrporju/sys_base/".$valor3["sf_path"]."\",1,0,0]";
+    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/workflow_dodevil/sys_base/".$valor3["sf_path"]."\",1,0,0]";
 	  $cont3++;
     }
     if($cont3>0){
@@ -145,7 +145,7 @@ HM_Array37 = [
     $cont3 = 0;
     while($valor3=mysql_fetch_array($resu3)){
     	  if($cont3>0){ echo ",\n";}
-    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/etrporju/sys_base/".$valor3["sf_path"]."\",1,0,0]";
+    	  echo "[\"&nbsp; ".$valor3["sf_nome"]."\",\"/workflow_dodevil/sys_base/".$valor3["sf_path"]."\",1,0,0]";
 	  $cont3++;
     }
     if($cont3>0){
