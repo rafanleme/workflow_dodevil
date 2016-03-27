@@ -40,4 +40,6 @@
   <frame name="Wnd_Sys_conteudo_principal" src="<? echo $url_certa ?>" frameborder=0 scrolling=yes resizable=no>
 </frameset><noframes></noframes>
 </html>
-<? include ("include/bottom.php");?>
+<? include ("include/bottom.php");?> 
+<!-- testando 27.03 // -->
+
