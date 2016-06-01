@@ -110,8 +110,8 @@ HM_GL_FramesMainFrameName = "Wnd_CONTEUDOSYS_Wnd_SYSbaixo";
 HM_GL_HoverTimeTop       = 0;
 HM_GL_HoverTimeTree      = 0;
 
-HM_GL_ImageDir           = "/workflow_dodevil/hr_menu/";
-HM_ScriptDir             = "/workflow_dodevil/hr_menu/";
+HM_GL_ImageDir           = "/faculdade/workflow_dodevil/hr_menu/";
+HM_ScriptDir             = "/faculdade/workflow_dodevil/hr_menu/";
 
 // The following function is included to illustrate the JS
 // expression handling of the left_position and top_position

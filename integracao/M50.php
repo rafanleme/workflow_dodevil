@@ -152,7 +152,6 @@ class interfaceM50 {
 		foreach($linhas as $klinha => $linha){
 			$newLine .= str_replace('<?xml version="1.0" encoding="windows-1252"?>', "", $linha);
 		}
-		echo $newLine . "----------------------<br>";
 		$arqNew = fopen($this->dirTratamento."\\".$arq,'w');
 		flock($arqNew, LOCK_EX);
 		fwrite($arqNew, $newLine);
@@ -173,7 +172,7 @@ class interfaceM50 {
 		$pedido = NULL; $pedidoNew = NULL; $tipoPessoa = NULL;
 		$i = -1;
 		
-		print_r($xml->LIST_G_LIST_CONF);
+		//print_r($xml->LIST_G_LIST_CONF);
 		
 		foreach($xml->LIST_G_LIST_CONF->G_LIST_CONF AS $row){
 			$i++;

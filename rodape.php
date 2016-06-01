@@ -38,12 +38,11 @@
     </td>
     <td align=center valign=middle width=50%>
       <font color=gray size=1 face=Verdana>
-      <font color=silver size=1 face=Verdana>Copyright &copy; 2015, <b>ID Logistics do Brasil</b></font>
+      <font color=silver size=1 face=Verdana>WorkFlow</b></font>
       </font>
     </td>
     <td align=right valign=top width=20%>
       <font color="gray" size=1 face=Verdana>
-      <!--i>Analista Responsável: <a href="mailto:jmuniz@id-logistics.com.br"><font color="gray" size=1 face=Verdana>Juliano Muniz</font></a>&nbsp; &nbsp;</i//-->
       </font>
     </td>
     <td width=10></td>

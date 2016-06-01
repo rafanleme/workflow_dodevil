@@ -33,8 +33,11 @@ class clienteDao extends dbConn{
 		$query = "INSERT INTO cad_cliente (".$campos.") VALUES (".$valores.")";
 		$myRes = $this->myConn->prepare($query) or die("erro cliente");
 		if ($myRes->execute()){
+			$this->uteisSql->addLog("Integracao Cliente","Sucesso - ".$dados["cpfcli"],"SUCESSO");
 			return true;
 		} else {
+			echo($query . "<BR><br>");
+			$this->uteisSql->addLog("Integracao Cliente","Erro - ".$dados["cpfcli"],"ERRO");
 			return false;
 		}
 		$myRes = NULL;

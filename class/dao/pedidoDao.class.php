@@ -27,7 +27,7 @@ class pedidoDao extends dbConn{
 		$query_r .= " AND ce.codest = cp.estped";
 		$query_r .= " AND cp.datped BETWEEN '".$dataAnt." 16:00:00'";
 		$query_r .= " AND '".$data." 15:59:00'";
-		$query_r .= " ORDER BY ROTPED";
+		$query_r .= " ORDER BY cp.refped, ROTPED";
 		//echo $query_r;
 		$myRes = $this->myConn->prepare($query_r);
 		$myRes->execute();

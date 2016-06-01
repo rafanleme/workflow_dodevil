@@ -102,9 +102,10 @@ HM_GL_ScrollBothBars = true;
 HM_GL_HoverTimeTop  = 0;
 HM_GL_HoverTimeTree = 0;
 
-HM_GL_ImageDir = "/workflow_dodevil/hr_menu/";
-HM_ScriptDir   = "/workflow_dodevil/hr_menu/";
+HM_GL_ImageDir = "/faculdade/workflow_dodevil/hr_menu/";
+HM_ScriptDir   = "/faculdade/workflow_dodevil/hr_menu/";
 
+alert (HM_ScriptDir);
 // The following function is included to illustrate the JS
 // expression handling of the left_position and top_position
 // parameters. You may delete if you have no use for it

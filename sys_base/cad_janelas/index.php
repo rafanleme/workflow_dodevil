@@ -18,7 +18,6 @@ error_reporting (0);
 <!--
 function calGridPed(){
 	document.getElementById("divAjax").innerHTML = "aguarde...";
-	var data = document.getElementById('frmData').value;
 	//var codpro = document.getElementById('codpro').value;
 	
   var xhttp = new XMLHttpRequest();
@@ -27,7 +26,7 @@ function calGridPed(){
      document.getElementById("divAjax").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "gridPed.php?data=" + data, true);
+  xhttp.open("GET", "gridJan.php", true);
   xhttp.send();
 }
 
@@ -94,7 +93,7 @@ function verificar()
 -->
 </script>
 </head>
-<body>
+<body onload="calGridPed()">
 <table border="0" cellpadding="1" cellspacing="2" width="100%">
 <tr>
   <td id="titulo2"><b><i><?echo $titulo_tool;?><i></b></td>

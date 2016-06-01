@@ -1,15 +1,4 @@
 <?
-/*#######################################################################
-#............INFORMACAO.SOBRE.O.DESENVOLVIMENTO.E.A.CRIACAO.............#
-#########################################################################
-#.............................. Analista:....Juliano Muniz..............#
-#.................................E-mail:....juliano.muniz@uol.com.br...#
-#................................Celular:....(11) 8611-8004.............#
-#.......................................................................#
-#.."BEM-AVENTURADO aquele que teme ao Senhor e anda nos seus caminhos...#
-#..Pois comeras do trabalho das tuas maos; feliz seras, e te ira bem."..#
-#...........................................* Salmo 128:1-2.............#
-#######################################################################*/
 
 ////////////////////////////////////////////////////////////
 // CONFIGURACAO DO MYSQL
@@ -19,7 +8,7 @@
    	echo $_SERVER["SERVER_NAME"];
 	$host = "localhost";
    	$pass = "";
-   	$database = "workflow_dodevil";
+   	$database = "workflow";
    	$user = "root";
    	$ambiente = "<div style='width:100%;height:25px;background-color:red;text-align:center;align:center;vertical-align:middle;'><font face=verdana size=2 color=white><b><marquee>* * * * * * DATABASE EM AMBIENTE DE TESTE * * * * * *</marquee></b></font></div>";
    }elseif(($_SERVER["SERVER_NAME"]=="ti-developer") OR ($_SERVER["SERVER_NAME"]=="190.67.10.71")  OR ($GLOBALS["AMBIENTE"]=="teste")){
@@ -51,7 +40,7 @@
    define("sqlPASSAS", $passAS);
 
 
- $titulo_pagina = ":: SISTEMA SISPCP ::";
+ $titulo_pagina = ":: WORK FLOW DODEVIL ::";
 
 
 function getRealIpAddr()

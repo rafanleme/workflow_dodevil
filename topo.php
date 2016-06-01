@@ -1,21 +1,4 @@
 <? include ("include/header.php");?>
-<!--
-/*#######################################################################
-#............INFORMACAO.SOBRE.O.DESENVOLVIMENTO.E.A.CRIACAO.............#
-#########################################################################
-#.............................. Analista:....Juliano Muniz..............#
-#.................................E-mail:....juliano.muniz@uol.com.br...#
-#................................Celular:....(11) 8611-8004.............#
-#.......................................................................#
-#.............................. Analista:....Marcelo Queiroz............#
-#.................................E-mail:....mqvida@yahoo.com.br........#
-#................................Celular:....(11) 7288-3151.............#
-#.......................................................................#
-#.."BEM-AVENTURADO aquele que teme ao Senhor e anda nos seus caminhos...#
-#..Pois comeras do trabalho das tuas maos; feliz seras, e te ira bem."..#
-#...........................................* Salmo 128:1-2.............#
-#######################################################################*/
-//-->
 
 <html>
 <head>
@@ -93,10 +76,10 @@ HM_PG_FramesMainFrameName = "Wnd_CONTEUDOSYS_Wnd_SYSbaixo";
 	<div id="header-wrapper" class="header-wrapper">
 		<div id="header-content" class="header-content">
 			<div class="header-content-login">
-				<span>Usuário: <?=$_SESSION["ses_nome"]?></span><br>
-				<span >Login: <?=$_SESSION["ses_login"]?></span><br>
+				<span style="color:white;">Usuário: <?=$_SESSION["ses_nome"]?></span><br>
+				<span style="color:white;">Login: <?=$_SESSION["ses_login"]?></span><br>
 				<? if (isset($_SESSION["ses_login"]) && in_array($_SESSION["ses_login"], array('jmuniz', 'mqueiroz', 'fsousa','dfonseca','rleme'))) : ?>
-        			<span ><a href="baixo.php" target="Wnd_CONTEUDOSYS_Wnd_SYSbaixo">.</a></span>
+        			<span style="color:white;"><a href="baixo.php" target="Wnd_CONTEUDOSYS_Wnd_SYSbaixo">ADM</a></span>
         		<? endif ?>
 			</div>
 		</div>

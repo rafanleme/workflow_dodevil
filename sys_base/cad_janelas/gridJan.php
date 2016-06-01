@@ -20,93 +20,55 @@ td span{display: block; padding: 3px}
 #lista .tabela-coluna6{width: 9%;}
 #lista .tabela-coluna7{width: 8%;}
 
+.divJan{
+	border:1px solid black;
+	padding:10px;
+	
+}
+
+#botaoJan {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image: -moz-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image: -ms-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image: -o-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image: linear-gradient(to bottom, #ffffff, #b3b3b3);
+  border-radius: 10px;
+  font-family: Arial;
+  color: #black;
+  width:100px;
+  height:50px;
+  padding: 10px 20px 10px 20px;
+  border: solid #black 1px;
+  text-decoration: none;
+}
+
+#botaoJan:hover {
+  background: #757575;
+  background-image: -webkit-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image: -moz-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image: -ms-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image: -o-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image: linear-gradient(to bottom, #b3b3b3, #ffffff);
+  text-decoration: none;
+}
 
 </style>
 <?php
 	error_reporting ("E_ALL");
-	include("../../class/dao/pedidoDao.class.php");
-	include("../../class/uteis.class.php");
-	$objGrid = new pedidoDao();
-	$pedidos = $objGrid->pedidosJanela($_GET['data']);
-	$uteis = new uteis();
 	//print_r($pedidos);
+	include("../../class/dao/janelaDao.class.php");
+	
+	$daoJan = new janelaDao();
+	$janDiaria = $daoJan->listaJanelaDiaria();
 	
 ?>
-<div class="tabContainer" id="lista">
-	
-		<table class="tbresumo" style="width:1339px"  >
-		<thead>
-		<tr>
-		<td colspan="7" style="background-color:EEEEEE;">Total de Pedidos: <b><?//echo $cont?></b></td>
-		<td align="center" style="background-color:EEEEEE;"><a href="index.php"><img src="../../images/btn_refresh.png"></a></td>
-		</tr>
-		<tr>
-		  <th class="tabela-coluna0" valign=middle>Data de integração</td>
-		  <th class="tabela-coluna1" valign=middle>Referência</td>
-		  <th class="tabela-coluna2" valign=middle NOWRAP>Cliente</td>
-		  <th class="tabela-coluna3" valign=middle NOWRAP>Endereço Entrega</td>			  
-		  <th class="tabela-coluna4" valign=middle NOWRAP>Cidade-UF Entrega</td>
-		  <th class="tabela-coluna5" valign=middle NOWRAP>Rota/Ordem</td>
-		  <th class="tabela-coluna6" valign=middle NOWRAP>Estado</td>
-		  <th class="tabela-coluna7" valign=middle>Arquivo</td>
-		</tr>
-		</thead>
-		</table>
-	
-<div class="scrollContainer">
-<table class="tbResumo" style="table-layout:fixed;" >
-<tbody>
-<?php
-	$difLinha = '0';
-	$i = 0;
-	foreach($pedidos as $pedido){
-?>
-<tr id="pedido<?php echo($i); ?>" onclick="gridSel(<?php echo($i); ?>,'conta')">
-	<td class="tabela-coluna0"  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>">
-		<p title="<?php echo $pedido['datped'];?>"><?php echo $pedido['datped'];?></p>
-	</td>                                                       
-	<td class="tabela-coluna1"                                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>">
-		<p title="<?php echo $pedido['refped'];?>"><?php echo $pedido['refped']?>         </p>                 
-	</td>                                                       
-	<td class="tabela-coluna2"                                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>" NOWRAP>
-		<p title="<?php echo utf8_decode($pedido['nomcli']);?>"><?php echo utf8_decode($uteis->strGrid($pedido['nomcli'],46));?> </p>              
-	</td>                                                       
-	<td class="tabela-coluna3"                                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>" NOWRAP>
-		<p title="<?php echo utf8_decode($pedido['endent']);?>"><?php echo utf8_decode($uteis->strGrid($pedido['endent'],40));?>             
-	</td>                                                       
-	<td class="tabela-coluna4" nowrap="nowrap"                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>" NOWRAP>
-		<p title="<?php echo utf8_decode($pedido['cident']." - ".$pedido['estent']);?>">
-			<?php echo utf8_decode($pedido['cident']." - ".$pedido['estent'])?>             
-	</td>                                                       
-	<td class="tabela-coluna5" nowrap="nowrap"                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>" NOWRAP>
-		    <?php 
-				if(!empty($pedido['rotped'])){
-					echo $pedido['rotped']."/".str_pad($pedido['ordped'], 3, "0", STR_PAD_LEFT);
-				}
-			?>
-	</td>                                                       
-	<td class="tabela-coluna6" nowrap="nowrap"                  
-		style="background-color:<?php if($difLinha != '0')echo('#EEEEEE');else echo('white');?>">
-		    <?php echo utf8_decode($pedido['desest'])?>
-	</td>                                                       
-	<td class="tabela-coluna7" 
-		style="background-color:<?php if($difLinha != '0'){$difLinha = '0';echo('EEEEEE');}else{echo('white');$difLinha = "1";}?>">
-			<a href="../../integracao/M50/<?php echo $pedido['arqped'];?>" title="Baixar Arquivo" download><?php echo utf8_decode(substr($pedido['arqped'],25,1000)); ?>
-	</td>
-</tr>
-<?php
-	$i++;
-	}
-?>
+<span style="font-size:12px;">Janela</span>
+<div class="divJan">
 
-<tr><td width=100% height=1 colspan=25><img src="../../images/gray1px.gif" width=100% height=1 border=0></td></tr>
-</tbody>
-</table>
+<input type="button" id="botaoJan" value="Janela 15/04">	
 </div>
+
+
+
 </div>

@@ -72,10 +72,10 @@ function __autoload($class_name) {
 ////////////////////////////////////////////////////////////
 // INTERFACE DE CONEXAO DO PHP COM O MYSQL
 ////////////////////////////////////////////////////////////
-	
-  $conexao = mysql_connect($host,$user,$pass) or die("<FONT face=arial COLOR=RED><b>ERRO COM CONEXÃO</b><p><font color=black>O serviiiidor de banco de dados não pode ser localizado ou não existe.</font></FONT>");
+  $conexao = mysql_connect($host,$user,$pass,$conexao,MYSQL_CLIENT_COMPRESS) or die("<FONT face=arial COLOR=RED><b>ERRO COM CONEXÃO</b><p><font color=black>O servidor de banco de dados não pode ser localizado ou não existe.</font></FONT>");
 //$conexao = mysql_pconnect(sqlHOST,sqlUSER,sqlPASS);
 //mysql_select_db(sqlDATA,$conexao);
+	
   mysql_select_db($database,$conexao) or die("<FONT face=arial COLOR=RED><b>ERRO COM BANCO DE DADOS</b><p><font color=black>O banco de dados não pode ser localizado ou não existe.</font></FONT>");
 
 ////////////////////////////////////////////////////////////

@@ -39,14 +39,17 @@ class pedidoDao extends dbConn{
 			}			
 		}
 		$query = "INSERT INTO cad_pedido (".$campos.") VALUES (".$valores.")";
-		echo($query . "<BR>");
+		//echo($query . "<BR>");
 		$myRes = $this->myConn->prepare($query);
 		if ($myRes->execute()){
+			$this->uteisSql->addLog("Integracao Pedido","Sucesso - ".$dados["refped"],"SUCESSO");
 			foreach($linhas as $linha){
 				$this->inserirLinha($pedido,$linha);
 			}
 			return true;
 		} else {
+			$this->uteisSql->addLog("Integracao Pedido","Erro - ".$dados["refped"],"ERRO");
+			echo($query . "<BR><br>");
 			return false;
 		}
 		$myRes = NULL;
@@ -62,11 +65,14 @@ class pedidoDao extends dbConn{
 			$valores .= "'".$val."'";
 		}
 		$query = "INSERT INTO cad_linha_pedido (refped,codlip,".$campos.") VALUES ('".$pedido."','".$max."',".$valores.")";
-		echo($query . "<BR>");
+		//echo($query . "<BR>");
 		$myRes = $this->myConn->prepare($query);
 		if ($myRes->execute()){
+			$this->uteisSql->addLog("Integracao Linha Pedido","Sucesso - ".$pedido,"SUCESSO");
 			return true;
 		} else {
+			echo($query . "<BR><br>");
+			$this->uteisSql->addLog("Integracao Linha Pedido","Erro - ".$pedido,"ERRO");
 			return false;
 		}
 		$myRes = NULL;

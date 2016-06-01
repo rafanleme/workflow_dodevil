@@ -48,14 +48,18 @@ class uteisMysql extends dbConn{
 		$myRes = NULL;
 	}
 
-	public function addLog($site,$direcao,$arquivo,$diretorio,$descricao){
-		$query_cadrecusa = "INSERT INTO cad_historico (ch_data, ch_site, ch_direcao, ch_arquivo, ch_descricao, ch_dirwork) VALUES (now(),?,?,?,?,?)";
+	public function addLog($processo,$mensagem,$natureza){
+		$logId = $this->maxId("cad_logs","codlog");
+		$hoje = date("Y")."//".date("m")."//".date("d")." ".date("H:m:s");
+		$query_cadrecusa = "INSERT INTO cad_logs (codlog,datlog,prolog,menlog,natlog)";
+		$query_cadrecusa .= " VALUES (?,now(),?,?,?)";
+		//echo $query_cadrecusa."<br><br>";
 		$myRes = $this->myConn->prepare($query_cadrecusa);
-		$myRes->bindParam(1, $site);
-		$myRes->bindParam(2, $direcao);
-		$myRes->bindParam(3, $arquivo);
-		$myRes->bindParam(4, $descricao);
-		$myRes->bindParam(5, $diretorio);
+		$myRes->bindParam(1, $logId);
+		$myRes->bindParam(2, $processo);
+		$myRes->bindParam(3, $mensagem);
+		$myRes->bindParam(4, $natureza);
+	
 		if ($myRes->execute()){
 			$this->cr_id = $this->myConn->lastInsertId();
 			$this->erro = false;
